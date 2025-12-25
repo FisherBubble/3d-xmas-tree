@@ -1,0 +1,7 @@
+{
+  "name": "Ethereal Holiday 3D Confession",
+  "description": "A festive 3D interactive application featuring a particle-based Christmas tree controlled by real-time hand gestures. Express your feelings with a magical gesture-triggered letter system.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
