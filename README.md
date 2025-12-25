@@ -1,4 +1,4 @@
-# 🎄 Ethereal Holiday 3D (灵动圣诞)
+# 🎄 Ethereal Holiday 3D (粒子交互圣诞树)
 
 A high-performance, luxury 3D interactive installation built with **Three.js**, **MediaPipe**, and **React**. Experience a celestial Christmas tree that responds to your hand gestures in real-time.
 
@@ -17,12 +17,13 @@ The system uses a **Dual-Hand Tracking** model to interpret your intentions:
 ---
 
 ## Engineering Highlights
+### 1.MediaPipe Integration
 
-### 1. Robust Gesture "Voting" System
+The application adopts HandLandmark Detection from MediaPipe which maps your hand to 21 anatomical landmarks.  You can test it on [MediaPipe Studio](https://mediapipe-studio.webapps.google.com/demo/hand_landmarker$0)
+![MediaPipe Landmarks](https://developers.google.com/static/mediapipe/images/solutions/hand-landmarks.png)
+
+### 2. Robust Gesture "Voting" System
 To solve the common "label flickering" in computer vision, this app implements a majoritarian voting logic. Instead of requiring 4/4 fingers for an open palm, it triggers if **3/4 fingers** meet the extension threshold, making it resilient to camera tilt and finger occlusion.
-
-### 2. Dual-Hand Topology
-The "Confession" (Heart) gesture now requires **both hands** to meet in space. This significantly increases detection confidence and prevents the AI from confusing a closed fist with a single-hand heart.
 
 ### 3. Shader-Based Animation
 All particle transitions and the "sway" effect are handled directly on the GPU via custom GLSL shaders, ensuring a silky-smooth 60FPS experience even on mobile devices.
@@ -36,12 +37,6 @@ You can find the prompt here:
 - **[Master Generation Prompt](./prompts/master-prompt.md)**: Use this to recreate or modify the entire core logic in [Gemini AI Studio](https://aistudio.google.com$0).
 
 
-## MediaPipe Integration
-
-The application adopts HandLandmark Detection from MediaPipe which maps your hand to 21 anatomical landmarks.  You can test it on [MediaPipe Studio](https://mediapipe-studio.webapps.google.com/demo/hand_landmarker$0)
-![MediaPipe Landmarks](https://developers.google.com/static/mediapipe/images/solutions/hand-landmarks.png)
-
----
 
 ## Local Setup (Vite)
 
